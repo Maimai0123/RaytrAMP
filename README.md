@@ -76,3 +76,14 @@ RaytrAMP Execution Time: 30 minutes
 FEKO Execution Time: It takes 2 minutes to finish 1% of 1 direction. So it would require 9 months to finish. Not included for this reason. (~10000x slower)  
 
 <img src="img/lancer.png">  
+
+---
+# How to building in window 10 OS (x64) 
+
+- step 1. install visual studio 2022
+- step 2. select `using c++ desktop developer` and choose window SDK, such as `window 11 SDK (10.0.22621.0)`
+- step 3. open solution `RaytrAMP-Master` in visual studio 2022
+- step 4. open project property page and navgation to `general` and change `window SDK version` attribute, such as `window 11 SDK (10.0.22621.0)`
+- step 5. go C/C++ tabs (in property page side bar) navgation to `preprocessor` and find one to `preprocessor Definitions` attibute and key in `_SILENCE_AMP_DEPRECATION_WARNINGS`
+- step 6. go C/C++ tabs navgation to `general` and find on to `Debug information Format` attribute and setting `None` or `Z7`
+- step 7. in MarKBA project go C/C++ tabs and navgation to `Code Generation` and find on to `Basic Runtime Checks` attribute and setting `None` or `Default` 
